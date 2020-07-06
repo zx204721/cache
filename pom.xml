@@ -16,6 +16,7 @@
     <modules>
         <module>caffeine-cache</module>
         <module>ehcache</module>
+        <module>Guava</module>
     </modules>
 
     <dependencies>
