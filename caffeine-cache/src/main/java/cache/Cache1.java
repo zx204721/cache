@@ -22,7 +22,8 @@ public class Cache1 {
         return Caffeine.newBuilder()
                 .removalListener((String key, DataObject dataObject, RemovalCause cause) ->
                         System.out.printf("Key %s was removed (%s)%n", key, cause))
-                .expireAfterWrite(1, TimeUnit.MINUTES)
+//                .expireAfterWrite(10, TimeUnit.SECONDS)
+                .expireAfterAccess(10, TimeUnit.SECONDS)
                 .maximumSize(10_000)
                 .build();
     }

@@ -24,7 +24,7 @@ class Cache1Test {
     }
 
     @Test
-    void test1() {
+    void test1() throws InterruptedException {
         String key = "a";
 
         DataObject dataObject = cache.getIfPresent(key);
@@ -35,5 +35,13 @@ class Cache1Test {
         assertNotNull(dataObject);
 
         cache.invalidateAll(Collections.singletonList(key));
+
+        cache.put(key, DataObject.get("haha"));
+
+        dataObject = cache.getIfPresent(key);
+        assertNotNull(dataObject);
+        Thread.sleep(10000);
+        dataObject = cache.getIfPresent(key);
+        assertNull(dataObject);
     }
 }
