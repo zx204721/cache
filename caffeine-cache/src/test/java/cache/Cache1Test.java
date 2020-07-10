@@ -2,8 +2,10 @@ package cache;
 
 import com.github.benmanes.caffeine.cache.Cache;
 import model.DataObject;
+import model.simple.User;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
+import sun.security.provider.MD5;
 
 import java.util.Collections;
 
@@ -43,5 +45,12 @@ class Cache1Test {
         Thread.sleep(10000);
         dataObject = cache.getIfPresent(key);
         assertNull(dataObject);
+    }
+
+    @Test
+    void testUser() {
+        User user = new User(1,"张三李四", new MD5().toString());
+
+        Cache<Long, User> cache = Cache1.createCache();
     }
 }

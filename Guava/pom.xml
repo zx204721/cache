@@ -12,6 +12,11 @@
     <artifactId>Guava</artifactId>
 
     <dependencies>
+        <dependency>
+            <groupId>top.zz6628</groupId>
+            <artifactId>common</artifactId>
+            <version>${project.version}</version>
+        </dependency>
         <!-- https://mvnrepository.com/artifact/com.google.guava/guava -->
         <dependency>
             <groupId>com.google.guava</groupId>
