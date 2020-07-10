@@ -17,6 +17,7 @@
         <module>caffeine-cache</module>
         <module>ehcache</module>
         <module>Guava</module>
+        <module>common</module>
     </modules>
 
     <dependencies>
@@ -25,6 +26,10 @@
             <artifactId>junit-jupiter</artifactId>
             <version>${junit.version}</version>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>top.zz6628</groupId>
+            <artifactId>common</artifactId>
         </dependency>
     </dependencies>
 </project>
