@@ -1,4 +1,4 @@
-package model;
+package top.zz6628.model;
 
 /**
  * @author zhenz

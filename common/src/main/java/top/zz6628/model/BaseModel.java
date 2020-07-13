@@ -1,4 +1,4 @@
-package model;
+package top.zz6628.model;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;

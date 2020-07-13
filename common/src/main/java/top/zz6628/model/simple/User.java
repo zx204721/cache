@@ -1,7 +1,7 @@
-package model.simple;
+package top.zz6628.model.simple;
 
 import lombok.Data;
-import model.BaseModel;
+import top.zz6628.model.BaseModel;
 
 /**
  * @author zhenz
