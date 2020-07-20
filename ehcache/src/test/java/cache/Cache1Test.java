@@ -10,8 +10,6 @@ import top.zz6628.model.simple.User;
 import java.util.Iterator;
 import java.util.UUID;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 /**
  * @author zhenz
  * @description
@@ -35,7 +33,7 @@ class Cache1Test {
         Iterator<Cache.Entry<Long, User>> iterator = onlineCache.iterator();
         while (iterator.hasNext()) {
             Cache.Entry<Long, User> next = iterator.next();
-            log.info("{}",JSON.toJSONString(next.getValue()));
+            log.info("{}", JSON.toJSONString(next.getValue()));
         }
     }
 }

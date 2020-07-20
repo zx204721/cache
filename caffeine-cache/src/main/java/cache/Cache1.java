@@ -17,6 +17,7 @@ public class Cache1 {
 
     /**
      * 创建缓存实体
+     *
      * @return
      */
     public static Cache<String, DataObject> createCache() {
@@ -31,6 +32,7 @@ public class Cache1 {
 
     /**
      * 创建缓存实体
+     *
      * @return
      */
     public static Cache<Integer, User> createUserCache() {

@@ -4,8 +4,8 @@ import com.github.benmanes.caffeine.cache.Caffeine;
 import com.github.benmanes.caffeine.cache.LoadingCache;
 import lombok.extern.slf4j.Slf4j;
 import top.zz6628.model.simple.User;
+import top.zz6628.util.Utils;
 
-import java.util.UUID;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -22,7 +22,7 @@ public class LoadingCache1 {
 
         return Caffeine.newBuilder().maximumSize(10_000).expireAfterWrite(1, TimeUnit.SECONDS).build(key -> {
             log.info("key: {} 重新加载。", key);
-            return new User(key, "test"+key, UUID.randomUUID().toString());
+            return Utils.createUser(key);
         });
     }
 }
