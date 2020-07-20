@@ -21,8 +21,8 @@ public class Cache1 {
      */
     public static Cache<String, DataObject> createCache() {
         return Caffeine.newBuilder()
-                .removalListener((String key, DataObject dataObject, RemovalCause cause) ->
-                        System.out.printf("Key %s was removed (%s)%n", key, cause))
+//                .removalListener((String key, DataObject dataObject, RemovalCause cause) ->
+//                        System.out.printf("Key %s was removed (%s)%n", key, cause))
 //                .expireAfterWrite(10, TimeUnit.SECONDS)
                 .expireAfterAccess(10, TimeUnit.SECONDS)
                 .maximumSize(10_000)
