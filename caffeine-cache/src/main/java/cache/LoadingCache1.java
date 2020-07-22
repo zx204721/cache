@@ -20,7 +20,9 @@ public class LoadingCache1 {
 
     public static LoadingCache<Long, User> createLoadingCache() {
 
-        return Caffeine.newBuilder().maximumSize(10_000).expireAfterWrite(1, TimeUnit.SECONDS).build(key -> {
+        return Caffeine.newBuilder().maximumSize(10_000).expireAfterWrite(1, TimeUnit.SECONDS)
+                .refreshAfterWrite(1, TimeUnit.SECONDS)
+                .build(key -> {
             log.info("key: {} 重新加载。", key);
             return Utils.createUser(key);
         });

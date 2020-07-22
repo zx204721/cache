@@ -25,8 +25,9 @@ class LoadingCache1Test {
         for (int i = 0; i < 10; i++) {
             User user = loadingCache.get((long) i);
         }
+        loadingCache.refresh(1L);
         log.info("==================");
-        Thread.sleep(1000);
+        Thread.sleep(5000);
 
         for (int i = 0; i < 10; i++) {
             User user = loadingCache.get((long) i);
